@@ -1,0 +1,169 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #c9ced3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: "Roboto Mono", sans-serif;
+  background: url(https://superdevresources.com/wp-content/uploads/2015/12/new-york-background.jpg)
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+.player-container {
+  height: 540px;
+  width: 400px;
+  background-color: #fefefe41;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 4px #242323;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.image-container {
+  position: relative;
+  top: 0px;
+  height: 320px;
+  width: 320px;
+  object-fit: cover;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.audio-container {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  height: 160px;
+  width: 80%;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+}
+
+/* Progress */
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 24px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+.progress {
+  background: #242323;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Controls */
+.player-controls {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+/* .icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+} */
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#repeat.active {
+  color: #ff8c00; /* Change the color to your desired active state color */
+}
+
+.fas {
+  font-size: 30px;
+  color: rgb(213, 213, 213);
+  cursor: pointer;
+  user-select: none;
+}
+
+.fas:hover {
+  filter: brightness(80%);
+}
+
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .img-container {
+    left: 29px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-container {
+    width: 95vw;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+}
